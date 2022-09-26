@@ -7,18 +7,62 @@
     android:background="@drawable/main_background"
     tools:context=".MainActivity">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/main_menu"
+        android:background="#1070D6"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#fff" />
 
     <Button
         android:id="@+id/btnClimateChange"
-        android:layout_width="170dp"
-        android:layout_height="51dp"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
         android:layout_marginTop="204dp"
         android:background="@drawable/btn_bg"
         android:text="Climate Change"
         android:textAllCaps="false"
+        android:textColor="#fff"
         android:textSize="20dp"
+        android:fontFamily="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHelp"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/btn_bg"
+        android:text="I Want To Help"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClimateChange" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="serif"
+        android:text="Exit"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
