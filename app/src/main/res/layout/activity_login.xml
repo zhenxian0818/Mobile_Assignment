@@ -53,14 +53,14 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/tfUsername"
+        android:id="@+id/tfEmail"
         android:layout_width="387dp"
         android:layout_height="69dp"
         android:layout_marginTop="76dp"
-        android:drawableLeft="@drawable/ic_user_profile"
+        android:drawableLeft="@android:drawable/sym_action_email"
         android:drawablePadding="7dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,5 +78,5 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/tfEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
