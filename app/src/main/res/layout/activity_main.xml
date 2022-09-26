@@ -19,50 +19,11 @@
         app:itemTextColor="#fff"
         app:itemIconTint="#fff" />
 
-    <Button
-        android:id="@+id/btnClimateChange"
-        android:layout_width="208dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="204dp"
-        android:background="@drawable/btn_bg"
-        android:text="Climate Change"
-        android:textAllCaps="false"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        android:fontFamily="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation" />
 
-    <Button
-        android:id="@+id/btnHelp"
-        android:layout_width="208dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/btn_bg"
-        android:text="I Want To Help"
-        android:textAllCaps="false"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        android:fontFamily="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnClimateChange" />
-
-    <Button
-        android:id="@+id/btnExit"
-        android:layout_width="208dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="serif"
-        android:text="Exit"
-        android:textAllCaps="false"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
