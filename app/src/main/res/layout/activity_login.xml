@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="161dp"
+        android:layout_height="56dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="199dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="220dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="@drawable/login_register_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="199dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="208dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="@drawable/login_register_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toTopOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/tfUsername"
+        android:layout_width="387dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="76dp"
+        android:drawableLeft="@drawable/ic_user_profile"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
+
+    <EditText
+        android:id="@+id/tfPassword"
+        android:layout_width="387dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tfUsername" />
+</androidx.constraintlayout.widget.ConstraintLayout>
