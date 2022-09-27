@@ -21,6 +21,7 @@ class Login : AppCompatActivity() {
         // authentication for login
         auth = FirebaseAuth.getInstance()
 
+
         //val email : TextView = findViewById(R.id.tfEmail)
         //val password : TextView = findViewById(R.id.tfPassword)
         val btnLogin : Button = findViewById(R.id.btnLogin)
@@ -52,4 +53,6 @@ class Login : AppCompatActivity() {
         }
         return false
     }
+
+
 }

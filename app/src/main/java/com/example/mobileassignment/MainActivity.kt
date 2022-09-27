@@ -11,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.internal.NavigationMenu
 import com.google.android.material.internal.NavigationMenuItemView
 import com.google.android.material.internal.NavigationMenuView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,11 +19,13 @@ class MainActivity : AppCompatActivity() {
     private val setGoalFragment = SetGoalFragment()
     private val userProfileFragment = UserProfileFragment()
     private val homeFragment = HomeFragment()
+    private val loginFragment = LoginFragment()
     private val quizFragment = QuizTitleFragment()
 
     lateinit var bottom_navigation : BottomNavigationView
 
     private lateinit var email : TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +47,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_set_goal->replaceFragment(setGoalFragment)
                 R.id.ic_quiz_page->replaceFragment(quizFragment)
                 R.id.ic_user_profile->{
-
+                    if(!isLogin()){
+                        replaceFragment(loginFragment)
+                    }
+                    else{
+                        replaceFragment(userProfileFragment)
+                    }
                 }
             }
             true
@@ -57,5 +65,10 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.fragment_container, fragment)
             transaction.commit()
         }
+    }
+
+    private fun isLogin():Boolean{
+        val authLogged = FirebaseAuth.getInstance().currentUser
+        return authLogged != null
     }
 }
