@@ -17,6 +17,11 @@
         android:title="Set Goal" />
 
     <item
+        android:id="@+id/ic_quiz_page"
+        android:icon="@drawable/ic_quiz_page"
+        android:title="Quiz" />
+
+    <item
         android:id="@+id/ic_user_profile"
         android:icon="@drawable/ic_user_profile"
         android:title="User Profile" />

@@ -6,10 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.mobileassignment.fragments.DailyTaskFragment
-import com.example.mobileassignment.fragments.HomeFragment
-import com.example.mobileassignment.fragments.SetGoalFragment
-import com.example.mobileassignment.fragments.UserProfileFragment
+import com.example.mobileassignment.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.internal.NavigationMenu
 import com.google.android.material.internal.NavigationMenuItemView
@@ -21,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private val setGoalFragment = SetGoalFragment()
     private val userProfileFragment = UserProfileFragment()
     private val homeFragment = HomeFragment()
+    private val quizFragment = QuizTitleFragment()
 
     lateinit var bottom_navigation : BottomNavigationView
 
@@ -44,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_home_page->replaceFragment(homeFragment)
                 R.id.ic_daily_task->replaceFragment(dailyTaskFragment)
                 R.id.ic_set_goal->replaceFragment(setGoalFragment)
+                R.id.ic_quiz_page->replaceFragment(quizFragment)
                 R.id.ic_user_profile->{
 
                 }
