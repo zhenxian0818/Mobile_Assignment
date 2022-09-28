@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/window_dim"
+    android:backgroundTint="#40FFFFFF"
     tools:context=".Login">
 
     <TextView
@@ -25,38 +26,38 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="199dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="183dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="12dp"
         android:layout_marginBottom="220dp"
+        android:background="@drawable/login_register_btn"
         android:text="Login"
         android:textAllCaps="false"
-        android:textSize="18sp"
         android:textColor="#fff"
-        android:background="@drawable/login_register_btn"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="199dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="208dp"
+        android:layout_width="183dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="204dp"
+        android:background="@drawable/login_register_btn"
         android:text="Register"
         android:textAllCaps="false"
-        android:textSize="18sp"
         android:textColor="#fff"
-        android:background="@drawable/login_register_btn"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
         app:layout_constraintStart_toStartOf="@+id/btnLogin"
         app:layout_constraintTop_toTopOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/tfEmail"
         android:layout_width="387dp"
         android:layout_height="69dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="48dp"
         android:drawableLeft="@android:drawable/sym_action_email"
         android:drawablePadding="7dp"
         android:ems="10"
@@ -70,7 +71,7 @@
         android:id="@+id/tfPassword"
         android:layout_width="387dp"
         android:layout_height="69dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:drawableLeft="@android:drawable/ic_lock_idle_lock"
         android:drawablePadding="7dp"
         android:ems="10"
