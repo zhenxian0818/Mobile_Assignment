@@ -27,7 +27,7 @@ class Login : AppCompatActivity() {
         //val email : TextView = findViewById(R.id.tfEmail)
         //val password : TextView = findViewById(R.id.tfPassword)
         val btnLogin : Button = findViewById(R.id.btnLogin)
-        val btnRegister : Button = findViewById(R.id.btnRegister)
+        val btnRegister : Button = findViewById(R.id.btnSignup)
 
         btnLogin.setOnClickListener {
             if (checking()) {
@@ -47,6 +47,7 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "Email or Password is Empty!", Toast.LENGTH_LONG).show()
             }
         }
+
     }
 
     private fun checking(): Boolean{
