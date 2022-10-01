@@ -8,11 +8,14 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.mobileassignment.fragments.HomeFragment
+import com.example.mobileassignment.fragments.UserProfileFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Register : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
 
     private lateinit var registerEmail : TextView
     private lateinit var registerPassword : TextView
@@ -30,7 +33,7 @@ class Register : AppCompatActivity() {
         registerIc = findViewById(R.id.tfRegisterIc)
 
         auth = FirebaseAuth.getInstance()
-
+        db = FirebaseFirestore.getInstance()
 
         btnSignup.setOnClickListener {
             if(checking()){
@@ -41,15 +44,33 @@ class Register : AppCompatActivity() {
                 var username = registerUsername.text.toString()
                 var ic = registerIc.text.toString()
 
-                auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this){
-                        task->
-                        if(task.isSuccessful){
-                            Toast.makeText(this, "Register Successfully!", Toast.LENGTH_LONG).show()
-                            var intent = Intent(this, Login::class.java)
-                            startActivity(intent)
+                val user = hashMapOf(
+                    "Username" to username,
+                    "IC" to ic,
+                    "email" to email
+                )
+
+                val Users = db.collection("USERS")
+                val query = Users.whereEqualTo("email", email).get()
+                    .addOnSuccessListener {
+                        tasks->
+                        if(tasks.isEmpty){
+                            auth.createUserWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(this){
+                                    task->
+                                    if(task.isSuccessful){
+                                        Users.document(email).set(user)
+                                        val intent = Intent(this, UserProfileFragment::class.java)
+                                        startActivity(intent)
+                                        finish()
+                                    }else{
+                                        Toast.makeText(this, "Login Failed", Toast.LENGTH_LONG).show()
+                                    }
+                                }
                         }else{
-                            Toast.makeText(this, "Register Failed!", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "User already exists!", Toast.LENGTH_LONG).show()
+                            val intent = Intent(this, Login::class.java)
+                            startActivity(intent)
                         }
                     }
             }else{
