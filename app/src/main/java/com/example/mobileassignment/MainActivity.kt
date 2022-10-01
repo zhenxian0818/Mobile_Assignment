@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     private val setGoalFragment = SetGoalFragment()
     private val userProfileFragment = UserProfileFragment()
     private val homeFragment = HomeFragment()
-    private val loginFragment = LoginFragment()
 
     lateinit var bottom_navigation : BottomNavigationView
 
@@ -46,8 +45,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_daily_task->replaceFragment(dailyTaskFragment)
                 R.id.ic_set_goal->replaceFragment(setGoalFragment)
                 R.id.ic_user_profile->{
-                    if(!isLogin()){
-                        replaceFragment(loginFragment)
+                    if(1 == 1){
+                        var intent = Intent(this, Login::class.java)
+                        startActivity(intent)
                     }
                     else{
                         replaceFragment(userProfileFragment)
