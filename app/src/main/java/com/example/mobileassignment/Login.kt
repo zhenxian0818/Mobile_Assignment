@@ -1,10 +1,12 @@
 package com.example.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.mobileassignment.fragments.UserProfileFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
@@ -28,19 +30,20 @@ class Login : AppCompatActivity() {
         val btnRegister : Button = findViewById(R.id.btnRegister)
 
         btnLogin.setOnClickListener {
-            if(checking()){
+            if (checking()) {
                 val email = tfEmail.text.toString()
                 val password = tfPassword.text.toString()
                 auth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this){
-                        task->
-                        if(task.isSuccessful){
-                            Toast.makeText(this, "Login Successful!", Toast.LENGTH_LONG).show()
-                        }else{
-                            Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_LONG).show()
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            var intent = Intent(this, UserProfileFragment::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_LONG)
+                                .show()
                         }
                     }
-            }else{
+            } else {
                 Toast.makeText(this, "Email or Password is Empty!", Toast.LENGTH_LONG).show()
             }
         }
