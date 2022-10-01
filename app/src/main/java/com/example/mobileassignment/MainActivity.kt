@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_daily_task->replaceFragment(dailyTaskFragment)
                 R.id.ic_set_goal->replaceFragment(setGoalFragment)
                 R.id.ic_user_profile->{
-                    if(1 == 1){
+                    if(!isLogin()){
                         var intent = Intent(this, Login::class.java)
                         startActivity(intent)
                     }

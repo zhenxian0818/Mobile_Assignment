@@ -1,11 +1,13 @@
 package com.example.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.mobileassignment.fragments.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class Register : AppCompatActivity() {
@@ -44,6 +46,8 @@ class Register : AppCompatActivity() {
                         task->
                         if(task.isSuccessful){
                             Toast.makeText(this, "Register Successfully!", Toast.LENGTH_LONG).show()
+                            var intent = Intent(this, Login::class.java)
+                            startActivity(intent)
                         }else{
                             Toast.makeText(this, "Register Failed!", Toast.LENGTH_LONG).show()
                         }
