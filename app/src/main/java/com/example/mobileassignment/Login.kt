@@ -29,7 +29,7 @@ class Login : AppCompatActivity() {
         tfPassword= findViewById(R.id.tfPassword)
 
         btnLogin.setOnClickListener {
-            if (1==1) {
+            if (checking()) {
                 val email = tfEmail.text.toString()
                 val password = tfPassword.text.toString()
                 auth.signInWithEmailAndPassword(email, password)
