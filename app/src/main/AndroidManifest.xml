@@ -14,16 +14,21 @@
         android:theme="@style/Theme.MobileAssignment"
         tools:targetApi="31">
         <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".QuizGameActivity"
-            android:exported="false" />
-        <activity
             android:name=".QuizRulesActivity"
             android:exported="false" />
         <activity
+            android:name=".QuizResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizGameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_game"
+            android:theme="@style/Theme.MobileAssignment.NoActionBar" />
+        <activity
             android:name=".QuizTitleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".Login"

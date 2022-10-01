@@ -10,6 +10,7 @@ class QuizRulesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_rules)
 
+
         val home =  findViewById<Button>(R.id.backtoQuizButton)
 
 
