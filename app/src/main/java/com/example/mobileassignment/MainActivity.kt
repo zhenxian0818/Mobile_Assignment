@@ -1,16 +1,12 @@
 package com.example.mobileassignment
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mobileassignment.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.internal.NavigationMenu
-import com.google.android.material.internal.NavigationMenuItemView
-import com.google.android.material.internal.NavigationMenuView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +39,8 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.ic_home_page->replaceFragment(homeFragment)
                 R.id.ic_daily_task->replaceFragment(dailyTaskFragment)
-                R.id.ic_set_goal->replaceFragment(setGoalFragment)
+                R.id.ic_news->startActivity(Intent(this, News::class.java))
+                R.id.ic_quiz_page->startActivity(Intent(this, QuizGameActivity::class.java))
                 R.id.ic_user_profile->{
                     if(!isLogin()){
                         replaceFragment(loginFragment)
