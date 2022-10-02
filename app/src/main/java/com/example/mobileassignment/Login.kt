@@ -7,14 +7,14 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.mobileassignment.fragments.UserProfileFragment
+import com.google.android.gms.common.api.internal.RegisterListenerMethod
 import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
 
     private lateinit var auth : FirebaseAuth
-
-    val tfEmail : TextView = findViewById(R.id.tfEmail)
-    val tfPassword : TextView = findViewById(R.id.tfPassword)
+    private lateinit var tfEmail : TextView
+    private lateinit var tfPassword : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +23,10 @@ class Login : AppCompatActivity() {
         // authentication for login
         auth = FirebaseAuth.getInstance()
 
-
-        //val email : TextView = findViewById(R.id.tfEmail)
-        //val password : TextView = findViewById(R.id.tfPassword)
         val btnLogin : Button = findViewById(R.id.btnLogin)
         val btnRegister : Button = findViewById(R.id.btnRegister)
+        tfEmail = findViewById(R.id.tfEmail)
+        tfPassword= findViewById(R.id.tfPassword)
 
         btnLogin.setOnClickListener {
             if (checking()) {
@@ -39,14 +38,19 @@ class Login : AppCompatActivity() {
                             var intent = Intent(this, UserProfileFragment::class.java)
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_LONG)
-                                .show()
+                            Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_LONG).show()
                         }
                     }
             } else {
                 Toast.makeText(this, "Email or Password is Empty!", Toast.LENGTH_LONG).show()
             }
         }
+
+        btnRegister.setOnClickListener {
+            var intent = Intent(this, Register::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun checking(): Boolean{
