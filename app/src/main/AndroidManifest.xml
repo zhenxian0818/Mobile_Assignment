@@ -14,9 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileAssignment"
         tools:targetApi="31">
-        <activity
-            android:name=".Login2"
-            android:exported="false" />
+
         <activity
             android:name=".News"
             android:exported="false" />

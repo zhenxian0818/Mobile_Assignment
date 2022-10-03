@@ -6,14 +6,19 @@ import android.os.Bundle
 import android.widget.Button
 
 class QuizTitleActivity : AppCompatActivity() {
+
+    private lateinit var start : Button
+    private lateinit var rules : Button
+    private lateinit var home : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_title)
 
         //Setting Variables
-        val start =  findViewById<Button>(R.id.startButton)
-        val rules =  findViewById<Button>(R.id.rulesButton)
-        val home =  findViewById<Button>(R.id.homeButton)
+        start =  findViewById(R.id.startButton)
+        rules =  findViewById(R.id.rulesButton)
+        home =  findViewById(R.id.backButton)
 
 
         //Navigating to Different Activities
