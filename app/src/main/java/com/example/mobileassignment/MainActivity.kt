@@ -12,10 +12,8 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
 
     private val dailyTaskFragment = DailyTaskFragment()
-    private val setGoalFragment = SetGoalFragment()
     private val userProfileFragment = UserProfileFragment()
     private val homeFragment = HomeFragment()
-    private val loginFragment = LoginFragment()
 
     lateinit var bottom_navigation : BottomNavigationView
 
@@ -40,10 +38,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_home_page->replaceFragment(homeFragment)
                 R.id.ic_daily_task->replaceFragment(dailyTaskFragment)
                 R.id.ic_news->startActivity(Intent(this, News::class.java))
-                R.id.ic_quiz_page->startActivity(Intent(this, QuizGameActivity::class.java))
                 R.id.ic_user_profile->{
                     if(!isLogin()){
-                        replaceFragment(loginFragment)
+                        val intent = Intent(this, Login::class.java)
+                        startActivity(intent)
                     }
                     else{
                         replaceFragment(userProfileFragment)

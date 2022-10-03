@@ -36,7 +36,9 @@ class Login : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             var intent = Intent(this, UserProfileFragment::class.java)
+                            intent.putExtra("email", email)
                             startActivity(intent)
+                            finish()
                         } else {
                             Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_LONG).show()
                         }
@@ -49,6 +51,7 @@ class Login : AppCompatActivity() {
         btnRegister.setOnClickListener {
             var intent = Intent(this, Register::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

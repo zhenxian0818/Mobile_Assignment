@@ -27,6 +27,7 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         val btnSignup : Button = findViewById(R.id.btnSignup)
+
         registerEmail = findViewById(R.id.tfRegisterEmail)
         registerPassword = findViewById(R.id.tfRegisterPassword)
         registerUsername = findViewById(R.id.tfRegisterUsername)
@@ -46,33 +47,38 @@ class Register : AppCompatActivity() {
 
                 val user = hashMapOf(
                     "Username" to username,
-                    "IC" to ic,
-                    "email" to email
+                    "Ic" to ic,
+                    "Email" to email
                 )
-
                 val Users = db.collection("USERS")
-                val query = Users.whereEqualTo("email", email).get()
+                val query = Users.whereEqualTo("Email", email).get()
                     .addOnSuccessListener {
                         tasks->
                         if(tasks.isEmpty){
+
                             auth.createUserWithEmailAndPassword(email, password)
                                 .addOnCompleteListener(this){
                                     task->
                                     if(task.isSuccessful){
+
                                         Users.document(email).set(user)
-                                        val intent = Intent(this, UserProfileFragment::class.java)
+                                        val intent = Intent(this, Login::class.java)
+                                        intent.putExtra("email", email)
                                         startActivity(intent)
                                         finish()
+
                                     }else{
-                                        Toast.makeText(this, "Login Failed", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(this, "Login Failed!", Toast.LENGTH_LONG).show()
                                     }
                                 }
+
                         }else{
-                            Toast.makeText(this, "User already exists!", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "This User is Existed!", Toast.LENGTH_LONG).show()
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                         }
                     }
+
             }else{
                 Toast.makeText(this, "Your Details is Empty", Toast.LENGTH_LONG).show()
             }
