@@ -1,61 +1,48 @@
 package com.example.mobileassignment.news
 
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.mobileassignment.News
 import com.example.mobileassignment.R
+import com.example.mobileassignment.news.model.Article
+import com.squareup.picasso.Picasso
 
 
-class NewsAdapter(private val newsList : List<News.Post>, private val listener: NewsAdapter.OnItemClickListener) :RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
-    inner class MyViewHolder(view: View)
-        : RecyclerView.ViewHolder(view), View.OnClickListener{
+class NewsAdapter(private val newsList : MutableList<Article>) :RecyclerView.Adapter<NewsHolder>() {
+    private lateinit var context : Context
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsHolder {
+        context = parent.context
+        return NewsHolder(LayoutInflater.from(context).inflate(R.layout.news_layout_item,parent,false))
+    }
 
-        val newsTitle: TextView = view.findViewById(R.id.newsTitle)
-        val newsAuthor: TextView = view.findViewById(R.id.newsAuthor)
-        val newsDesc: TextView = view.findViewById(R.id.newsDesc)
-        val newsImage: ImageView = view.findViewById(R.id.newsImage)
+    override fun getItemCount(): Int = newsList.size
 
-        init {
-            view.setOnClickListener(this)
+    override fun onBindViewHolder(holder: NewsHolder, position: Int) {
+        val newsData = newsList[position]
+
+        holder.newsTitle.text = newsData.title
+        holder.newsAuthor.text = newsData.author
+        holder.newsDesc.text = newsData.description
+        Picasso.get()
+            .load(newsData.urlToImage)
+            .into(holder.newsImage)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(newsData.url))
+            context.startActivity(intent)
         }
-
-        override fun onClick(v: View?) {
-            val position = bindingAdapterPosition
-            if(position != RecyclerView.NO_POSITION){
-                listener.itemClick(position)
-            }
-        }
-    }
-    interface OnItemClickListener{
-        fun itemClick(position: Int)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentNews = newsList[position]
-
-        holder.newsTitle.text = currentNews.title
-        holder.newsAuthor.text = currentNews.author
-        holder.newsDesc.text = currentNews.description
-        Glide.with(holder.itemView).load(currentNews.urlToImage).into(holder.newsImage);
 
 
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val itemView = inflater.inflate(R.layout.news_layout_item,parent,false)
-        return MyViewHolder(itemView)
-    }
 
-    override fun getItemCount(): Int {
-        return newsList.size
-    }
+
+
 
 }
 
