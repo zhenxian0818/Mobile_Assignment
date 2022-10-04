@@ -8,20 +8,39 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnClimateChange"
+        android:id="@+id/btnNews"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="serif"
+        android:text="Latest News"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
+
+    <Button
+        android:id="@+id/btnFaq"
         android:layout_width="208dp"
         android:layout_height="65dp"
         android:layout_marginTop="204dp"
         android:background="@drawable/btn_bg"
-        android:text="Climate Change"
+        android:fontFamily="serif"
+        android:text="FAQ"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        android:fontFamily="serif"
+        app:layout_constraintBottom_toTopOf="@+id/btnHelp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
     <Button
         android:id="@+id/btnQuiz"
@@ -34,40 +53,45 @@
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNews"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnHelp"
         android:layout_width="208dp"
         android:layout_height="65dp"
-        android:layout_marginTop="72dp"
         android:background="@drawable/btn_bg"
+        android:fontFamily="serif"
         android:text="I Want To Help"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        android:fontFamily="serif"
+        app:layout_constraintBottom_toTopOf="@+id/btnExit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnClimateChange" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="208dp"
         android:layout_height="65dp"
-        android:layout_marginTop="72dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="Exit"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

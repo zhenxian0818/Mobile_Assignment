@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     android:layout_marginBottom="20dp"
     app:cardBackgroundColor="#BFFFFFFF"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -27,10 +30,30 @@
 
             <TextView
                 android:id="@+id/newsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextAppearance.Material3.TitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:text="News Title" />
+
+            <TextView
+                android:id="@+id/newsDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/newsAuthorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Written By : "
+                app:textAllCaps="true"
+                android:textStyle="bold"
+                />
 
             <TextView
                 android:id="@+id/newsAuthor"
@@ -39,12 +62,6 @@
                 android:layout_weight="1"
                 android:text="Author" />
 
-            <TextView
-                android:id="@+id/newsDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Description" />
         </LinearLayout>
 
     </LinearLayout>

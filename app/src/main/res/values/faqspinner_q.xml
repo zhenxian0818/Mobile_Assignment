@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faqspinner_q">
+        <item>Is it climate change, global warming, or global climate crisis?</item>
+        <item>Is climate change caused by humans?</item>
+        <item>What are the main threats of climate change?</item>
+        <item>How is climate change affecting animals?</item>
+        <item>How is climate change affecting people?</item>
+        <item>How is climate change affecting the ocean?</item>
+        <item>How is climate change affecting farms and our food?</item>
+        <item>Does deforestation contribute to climate change?</item>
+    </string-array>
+</resources>

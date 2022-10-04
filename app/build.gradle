@@ -76,7 +76,6 @@ dependencies {
     implementation 'com.github.kittinunf.fuel:fuel:2.3.1'
     implementation 'com.github.kittinunf.fuel:fuel-moshi:2.3.1'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
-    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
 
 

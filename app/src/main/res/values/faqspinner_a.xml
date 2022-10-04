@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faqspinner_a">
+        <item>Each of these terms refers to the same thing—the fact that the average temperature of the earth\'s atmosphere is rising. As the temperature rises, various impacts are changing aspects of our climate—hotter summers, rising ocean temperatures, melting polar ice, increased storm activity. These go beyond mere changes in the weather.</item>
+        <item>Yes, over 97% of scientist agree that humans cause climate change. Humanity’s accelerated burning of fossil fuels and deforestation (forests are key parts of the planet’s natural carbon management systems) have led to rapid increases of greenhouse gases in the atmosphere and global warming.</item>
+        <item>The main threats of climate change, stemming from the rising temperature of Earth’s atmosphere include rising sea levels, ecosystem collapse and more frequent and severe weather.</item>
+        <item>Changing climates directly and indirectly cause stress to animals across the world. Many species are approaching—or have already reached—the limit of where they can go to find hospitable climates. In the polar regions, animals like polar bears that live on polar ice are now struggling to survive as that ice melts.</item>
+        <item>From straining agricultural systems to making regions less habitable, climate change is affecting people everywhere. You may have noticed how weather patterns near you are shifting or how more frequent and severe storms are developing in the spring. Maybe your community is experiencing more severe flooding or wildfires.</item>
+        <item>Warming ocean temperatures are melting polar ice, shifting ocean currents and fish migrations, and leading to coral bleaching and die off. Because of oceans’ important role in regulating Earth’s climate by absorbing greenhouse gas emissions, they’re taking a direct hit from climate change.</item>
+        <item>Climate change is disrupting weather patterns, leading to more extreme and frequent droughts and flooding events that directly threaten harvests. The warming climate is contributing to rising populations of insect pests that eat a higher share of crop yields.</item>
+        <item>Yes, deforestation contributes to climate change in a couple ways. Forests are one of our most important types of natural carbon storage, so when forests get cut down, they lose their ability to store the greenhouse gas. Burning trees release even more carbon into the atmosphere.</item>
+    </string-array>
+</resources>

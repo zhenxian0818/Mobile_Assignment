@@ -1,6 +1,8 @@
 package com.example.mobileassignment
 
 import android.os.Bundle
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,7 +33,7 @@ class News : AppCompatActivity() {
 
         //var newsDataList : List<NewsSource> = listOf()
         AndroidNetworking.initialize(this)
-        AndroidNetworking.get("https://newsapi.org/v2/everything?q=climatechange&apiKey=72b5b594568d489f815624b4856d570d")
+        AndroidNetworking.get("https://newsapi.org/v2/everything?q=globalwarming&apiKey=72b5b594568d489f815624b4856d570d")
             .build()
             .getAsObject(Reqres::class.java, object : ParsedRequestListener<Reqres> {
                 override fun onResponse(response: Reqres) {
@@ -40,7 +42,7 @@ class News : AppCompatActivity() {
                 }
 
                 override fun onError(anError: ANError?) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(applicationContext, "Data Retrieval Error ", LENGTH_SHORT).show()
                 }
             })
     }
