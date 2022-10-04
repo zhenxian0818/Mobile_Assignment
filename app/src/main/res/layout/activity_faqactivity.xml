@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:srcCompat="@drawable/window_dim"
-        app:tint="#40FFFFFF"
+        app:tint="#808F8E8E"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
