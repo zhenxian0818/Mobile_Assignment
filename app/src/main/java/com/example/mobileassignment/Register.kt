@@ -7,8 +7,6 @@ import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.mobileassignment.fragments.HomeFragment
-import com.example.mobileassignment.fragments.UserProfileFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -63,7 +61,7 @@ class Register : AppCompatActivity() {
 
                                         Users.document(email).set(user)
                                         val intent = Intent(this, Login::class.java)
-                                        intent.putExtra("email", email)
+                                        intent.putExtra("Email", email)
                                         startActivity(intent)
                                         finish()
 

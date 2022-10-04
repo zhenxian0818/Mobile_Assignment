@@ -11,6 +11,13 @@ import com.example.mobileassignment.*
 
 class HomeFragment : Fragment() {
 
+    private lateinit var btnQuiz : Button
+    private lateinit var btnHelp : Button
+    private lateinit var btnNews : Button
+    private lateinit var btnFaq : Button
+    private lateinit var btnExit : Button
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,12 +36,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnQuiz : Button = view.findViewById(R.id.btnQuiz)
-        val btnHelp : Button = view.findViewById(R.id.btnHelp)
-        val btnNews : Button = view.findViewById(R.id.btnNews)
-        val btnFaq : Button = view.findViewById(R.id.btnFaq)
-        val btnExit : Button = view.findViewById(R.id.btnExit)
-        val btnAchievements : Button = view.findViewById(R.id.btnAchievements)
+        btnQuiz = view.findViewById(R.id.btnQuiz)
+        btnHelp = view.findViewById(R.id.btnHelp)
+        btnNews = view.findViewById(R.id.btnNews)
+        btnFaq  = view.findViewById(R.id.btnFaq)
+        btnExit = view.findViewById(R.id.btnExit)
 
         btnQuiz.setOnClickListener {
             val intent = Intent(this.requireActivity(), QuizTitleActivity::class.java)
@@ -57,11 +63,6 @@ class HomeFragment : Fragment() {
         btnExit.setOnClickListener {
             activity?.moveTaskToBack(true)
             activity?.finish()
-        }
-
-        btnAchievements.setOnClickListener{
-            val intent = Intent(this.requireActivity(), AchievementsActivity::class.java)
-            startActivity(intent)
         }
 
 

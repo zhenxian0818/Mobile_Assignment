@@ -24,11 +24,20 @@
             android:label="@string/title_activity_achievements"
             android:theme="@style/Theme.MobileAssignment.NoActionBar" />
         <activity
+            android:name=".UserProfile"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".FAQActivity"
             android:exported="false" />
-        <activity
-            android:name=".ClimateActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ClimateActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".DonationActivity"
             android:exported="false" />
@@ -60,11 +69,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -52,6 +52,20 @@
         app:layout_constraintTop_toTopOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="217dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/login_register_btn"
+        android:text="Back To Home"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/tfEmail"
         android:layout_width="387dp"
