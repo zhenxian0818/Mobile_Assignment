@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
         val btnHelp : Button = view.findViewById(R.id.btnHelp)
         val btnNews : Button = view.findViewById(R.id.btnNews)
         val btnFaq : Button = view.findViewById(R.id.btnFaq)
+        val btnExit : Button = view.findViewById(R.id.btnExit)
 
         btnQuiz.setOnClickListener {
             val intent = Intent(this.requireActivity(), QuizTitleActivity::class.java)
@@ -51,6 +52,10 @@ class HomeFragment : Fragment() {
         btnHelp.setOnClickListener {
             val intent = Intent(this.requireActivity(), DonationActivity::class.java)
             startActivity(intent)
+        }
+        btnExit.setOnClickListener {
+            activity?.moveTaskToBack(true)
+            activity?.finish()
         }
 
 
