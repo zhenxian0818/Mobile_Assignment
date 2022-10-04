@@ -13,6 +13,7 @@
         android:id="@+id/backtoQuizButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How to Play"
+        android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,10 +45,10 @@
         android:backgroundTint="#66595959"
         android:text="- To Begin, click on the &quot;Play&quot; button.
         \n\n- A set of 4 questions will be generated for you to answer.
-        \n\n- A correct option will be highlighted in Green while an incorrect option will be in Red.
         \n\n- If you have selected the correct option a point will be added towards your total.
         \n\n- Once the quiz has ended you are able to see your total points.
         \n\n- You can try again or head back to the main menu once completed."
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
