@@ -66,7 +66,7 @@
         android:layout_height="65dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
-        android:text="I Want To Help"
+        android:text="I want to Donate"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"

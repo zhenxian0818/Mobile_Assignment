@@ -5,18 +5,6 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/ic_home_page.xml" value="0.2385" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/login_register_btn.xml" value="0.2385" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/quizbuttons.xml" value="0.1495" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/quizoption1.xml" value="0.1495" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/quizoption2.xml" value="0.1495" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/quizoption3.xml" value="0.1495" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/drawable/quizoption4.xml" value="0.1495" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_donation.xml" value="0.22" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_main.xml" value="0.26875" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_quiz_game.xml" value="0.26875" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_quiz_result.xml" value="0.2546875" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_quiz_rules.xml" value="0.26875" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_quiz_title.xml" value="0.26875" />
-        <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/activity_ways_to_help.xml" value="0.26875" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/fragment_home.xml" value="0.26875" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/fragment_quiz_title.xml" value="0.26875" />
         <entry key="..\:/AndroidStudioProjects/Mobile_Assignment/app/src/main/res/layout/fragment_set_goal.xml" value="0.25" />
@@ -60,7 +48,7 @@
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/drawable/quizoption3.xml" value="0.356" />
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/drawable/quizoption4.xml" value="0.356" />
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_climate.xml" value="0.33" />
-        <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_faqactivity.xml" value="0.33" />
+        <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_faqactivity.xml" value="0.35" />
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_main.xml" value="0.25407608695652173" />
         <entry key="..\:/Users/User/Desktop/Y3S1/Mobile/Mobile_Assignment/app/src/main/res/layout/activity_news.xml" value="0.33" />
