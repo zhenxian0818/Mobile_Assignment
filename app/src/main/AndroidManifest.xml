@@ -4,6 +4,7 @@
     package="com.example.mobileassignment">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileAssignment"
         tools:targetApi="31">
+
+
+        <activity
+            android:name=".AchievementsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_achievements"
+            android:theme="@style/Theme.MobileAssignment.NoActionBar" />
         <activity
             android:name=".FAQActivity"
             android:exported="false" />

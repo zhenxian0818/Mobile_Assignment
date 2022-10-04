@@ -78,6 +78,23 @@
         app:layout_constraintVertical_bias="0.746" />
 
     <Button
+        android:id="@+id/btnAchievements"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="serif"
+        android:text="Achievements"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <Button
         android:id="@+id/btnExit"
         android:layout_width="208dp"
         android:layout_height="65dp"
