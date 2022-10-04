@@ -12,12 +12,9 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
 
     private val dailyTaskFragment = DailyTaskFragment()
-    private val userProfileFragment = UserProfileFragment()
     private val homeFragment = HomeFragment()
 
     lateinit var bottom_navigation : BottomNavigationView
-
-    private lateinit var email : TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +41,8 @@ class MainActivity : AppCompatActivity() {
                         startActivity(intent)
                     }
                     else{
-                        replaceFragment(userProfileFragment)
+                        val intent = Intent(this, UserProfile::class.java)
+                        startActivity(intent)
                     }
                 }
             }
