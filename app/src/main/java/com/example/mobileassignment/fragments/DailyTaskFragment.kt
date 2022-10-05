@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.mobileassignment.AchievementsActivity
 import com.example.mobileassignment.QuizTitleActivity
@@ -17,6 +18,7 @@ class DailyTaskFragment : Fragment() {
 
     private lateinit var quizBtn: Button
     private lateinit var doneBtn: Button
+    private lateinit var tvText : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +43,7 @@ class DailyTaskFragment : Fragment() {
         val settings = this.requireActivity().getSharedPreferences("PREFS", 0)
         val lastDay = settings.getInt("day", 0)
 
-        if (lastDay != day) {
+
             quizBtn = view.findViewById(R.id.quizButton)
             quizBtn.visibility = View.VISIBLE
             quizBtn.isClickable = true
@@ -57,6 +59,11 @@ class DailyTaskFragment : Fragment() {
                 val intent = Intent(this.requireActivity(), AchievementsActivity::class.java)
                 startActivity(intent)
             }
+            if(lastDay == day){
+                quizBtn.visibility = View.INVISIBLE
+                doneBtn.visibility = View.INVISIBLE
+                tvText = view.findViewById(R.id.tvText)
+                tvText.visibility = View.VISIBLE
+            }
         }
     }
-}

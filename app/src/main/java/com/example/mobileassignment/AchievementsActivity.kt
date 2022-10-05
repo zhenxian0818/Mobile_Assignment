@@ -2,6 +2,7 @@ package com.example.mobileassignment
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.Sensor
 import android.hardware.SensorManager
@@ -10,6 +11,7 @@ import android.hardware.SensorEventListener
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -23,6 +25,7 @@ class AchievementsActivity : AppCompatActivity(), SensorEventListener {
     val ACTIVITY_RECOGNITION_REQUEST_CODE = 100
     private lateinit var stepsvalue : TextView
     private var pressure: Sensor? = null
+    private lateinit var btnBack2 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,11 @@ class AchievementsActivity : AppCompatActivity(), SensorEventListener {
             val name = user.displayName
             val email = user.email
             val photoUrl = user.photoUrl
+        }
+        btnBack2 = findViewById(R.id.btnBack2)
+        btnBack2.setOnClickListener(){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
