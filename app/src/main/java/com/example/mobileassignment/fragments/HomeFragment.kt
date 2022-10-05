@@ -16,6 +16,7 @@ class HomeFragment : Fragment() {
     private lateinit var btnNews : Button
     private lateinit var btnFaq : Button
     private lateinit var btnExit : Button
+    private lateinit var btnAchievements : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,7 @@ class HomeFragment : Fragment() {
         btnNews = view.findViewById(R.id.btnNews)
         btnFaq  = view.findViewById(R.id.btnFaq)
         btnExit = view.findViewById(R.id.btnExit)
+        btnAchievements = view.findViewById(R.id.btnAchievements)
 
         btnQuiz.setOnClickListener {
             val intent = Intent(this.requireActivity(), QuizTitleActivity::class.java)
@@ -58,6 +60,11 @@ class HomeFragment : Fragment() {
 
         btnHelp.setOnClickListener {
             val intent = Intent(this.requireActivity(), DonationActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnAchievements.setOnClickListener {
+            val intent = Intent(this.requireActivity(), AchievementsActivity::class.java)
             startActivity(intent)
         }
         btnExit.setOnClickListener {
