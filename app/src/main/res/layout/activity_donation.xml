@@ -16,10 +16,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+        app:layout_constraintVertical_bias="0.393" />
 
     <TextView
         android:id="@+id/evergreenDesc"
@@ -28,6 +28,7 @@
         android:text="They advocate for the government to adopt the urgent climate policies that science demands."
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,17 +38,17 @@
 
     <Button
         android:id="@+id/evergreenDonateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
         android:backgroundTint="#3cb371"
         android:text="Donate to EC"
-
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.844" />
 
     <TextView
         android:id="@+id/evergreenTitle"
@@ -58,7 +59,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.655" />
@@ -70,6 +71,7 @@
         android:text="They works to protect the rainforests of Central and South America by partnering with Indigenous people."
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -83,13 +85,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#3cb371"
         android:text="Donate to RFUS"
-
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.576" />
 
     <TextView
         android:id="@+id/donateTitle"
@@ -109,14 +111,15 @@
         android:id="@+id/cefDonateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Donate to CEF"
         android:backgroundTint="#3cb371"
+        android:text="Donate to CEF"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.311" />
 
     <TextView
         android:id="@+id/cefTitle"
@@ -139,6 +142,7 @@
         android:text="They provide a safe and legal means for donors to support disruptive protest that wakes up the public and puts intense pressure on lawmakers."
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -148,14 +152,15 @@
 
     <Button
         android:id="@+id/homeDonateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#3cb371"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.957" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,104 +11,96 @@
         android:id="@+id/btnNews"
         android:layout_width="208dp"
         android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="Latest News"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFaq"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintTop_toBottomOf="@+id/btnQuiz" />
 
     <Button
         android:id="@+id/btnFaq"
         android:layout_width="208dp"
         android:layout_height="65dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="FAQ"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnHelp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNews" />
 
     <Button
         android:id="@+id/btnQuiz"
         android:layout_width="208dp"
         android:layout_height="65dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="Play a Quiz!"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnNews"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnHelp"
         android:layout_width="208dp"
         android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="I want to Donate"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnExit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFaq" />
 
     <Button
         android:id="@+id/btnAchievements"
         android:layout_width="208dp"
         android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="Achievements"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnExit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="208dp"
         android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="serif"
         android:text="Exit"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAchievements" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

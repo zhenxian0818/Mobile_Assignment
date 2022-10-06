@@ -6,10 +6,7 @@ import android.graphics.Paint
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -17,6 +14,7 @@ class FAQActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var faqSourceLink : TextView
     private lateinit var faqSpinner : Spinner
     private lateinit var faqAns : TextView
+    private lateinit var btnFaqHome : Button
 
     private lateinit var faqListAns : Array<String>
 
@@ -24,6 +22,8 @@ class FAQActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faqactivity)
+
+        btnFaqHome = findViewById(R.id.btnFaqHome)
 
         faqSourceLink = findViewById(R.id.faqSourceURL)
         faqSpinner = findViewById(R.id.faqSpinnerQ)
@@ -38,6 +38,14 @@ class FAQActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 Uri.parse("https://www.nature.org/en-us/what-we-do/our-priorities/tackle-climate-change/climate-change-stories/climate-change-frequently-asked-questions/#crisis")))
 
         }
+
+        // Back Button
+        btnFaqHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         ArrayAdapter.createFromResource(
             this,
             R.array.faqspinner_q,

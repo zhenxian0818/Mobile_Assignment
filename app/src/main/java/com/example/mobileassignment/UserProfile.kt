@@ -15,6 +15,7 @@ class UserProfile : AppCompatActivity() {
     private lateinit var db : FirebaseFirestore
 
     private lateinit var btnSignOut : Button
+    private lateinit var btnHome : Button
     private lateinit var tvUserName : TextView
     private lateinit var tvUserEmail : TextView
     private lateinit var tvUserIc : TextView
@@ -49,6 +50,7 @@ class UserProfile : AppCompatActivity() {
 
 
         btnSignOut = findViewById(R.id.userProfLogOutBtn)
+        btnHome = findViewById(R.id.userProfHomeBtn)
 
         auth = FirebaseAuth.getInstance()
 
@@ -58,6 +60,13 @@ class UserProfile : AppCompatActivity() {
             startActivity(intent)
             auth.signOut()
         }
+
+        btnHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     private fun setText(email:String?){

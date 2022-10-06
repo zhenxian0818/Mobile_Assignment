@@ -20,13 +20,15 @@
         android:id="@+id/faqSpinnerQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.263"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/faqAnswerTv"
@@ -48,18 +50,19 @@
 
     <TextView
         android:id="@+id/faqSourceURL"
-        android:layout_width="266dp"
-        android:layout_height="24dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:selectAllOnFocus="false"
         android:text="Sourced From : The Nature Conservancy"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        android:selectAllOnFocus="false"
-        android:linksClickable="true"
-        android:autoLink="all"
-        />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/faqTitle"
@@ -100,5 +103,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.924" />
+
+    <Button
+        android:id="@+id/btnFaqHome"
+        android:layout_width="123dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/login_register_btn"
+        android:text="Home Page"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faqAnswerTv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

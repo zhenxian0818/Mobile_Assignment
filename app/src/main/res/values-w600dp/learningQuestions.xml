@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="learningQuestionsSpinner">
+        <item>What are Greenhouse Gases?</item>
+        <item>What is the Greenhouse Effect?</item>
+        <item>How can you help in fighting Climate Change?</item>
+        <item>What is the Paris Agreement of 2015?</item>
+        <item>What are the countries with the highest CO2 emissions?</item>
+        <item>What are the global Emissions by Economic Sector</item>
+        <item>What are the warmest years to date?.</item>
+    </string-array>
+</resources>

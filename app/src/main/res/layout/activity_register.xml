@@ -22,70 +22,126 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.191" />
 
-    <EditText
-        android:id="@+id/tfRegisterEmail"
-        android:layout_width="277dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="40dp"
-        android:drawableLeft="@android:drawable/sym_action_email"
-        android:drawablePadding="7dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
 
-    <EditText
-        android:id="@+id/tfRegisterPassword"
-        android:layout_width="277dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
-        android:drawablePadding="7dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="440dp"
+        app:errorTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FA0505"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfRegisterEmail" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <EditText
-        android:id="@+id/tfRegisterUsername"
-        android:layout_width="277dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_person"
-        android:drawablePadding="7dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfRegisterPassword" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfRegisterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:drawablePadding="7dp"
+            android:hint="Email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLength="30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/tfRegisterIc"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_identity"
-        android:drawablePadding="7dp"
-        android:ems="10"
-        android:hint="IC No"
-        android:inputType="textPersonName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordContainer"
+        android:layout_width="372dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="12dp"
+        app:errorTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FA0505"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfRegisterUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/emailContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfRegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="7dp"
+            android:hint="Password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameContainer"
+        android:layout_width="372dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="12dp"
+        app:errorTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FA0505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfRegisterUsername"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="7dp"
+            android:hint="Username"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/icContainer"
+        android:layout_width="372dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="12dp"
+        app:errorTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FA0505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfRegisterIc"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/ic_identity"
+            android:drawablePadding="7dp"
+            android:hint="IC"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnSignup"
-        android:layout_width="183dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="96dp"
+        android:layout_width="187dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/login_register_btn"
         android:text="Sign Up"
         android:textAllCaps="false"
@@ -93,7 +149,23 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegBack"
+        android:layout_width="183dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/login_register_btn"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnSignup" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

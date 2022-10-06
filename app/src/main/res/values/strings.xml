@@ -13,4 +13,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_quiz_game">QuizGameActivity</string>
     <string name="title_activity_achievements">AchievementsActivity</string>
+    <string name="required">Required</string>
 </resources>

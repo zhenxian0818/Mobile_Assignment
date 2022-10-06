@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".UserProfile">
 
-    <ImageView
-        android:id="@+id/userProfileImage"
+    <TextView
+        android:id="@+id/tvUserProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="148dp"
+        android:text="User Profile"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvProfName"
@@ -31,11 +31,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvProfEmail"
+        android:id="@+id/tvProfIC"
         android:layout_width="91dp"
         android:layout_height="27dp"
         android:layout_marginTop="40dp"
-        android:text="Email"
+        android:text="IC No"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
@@ -43,61 +43,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tvProfName" />
 
     <TextView
-        android:id="@+id/tvProfIc"
+        android:id="@+id/tvProfEmail"
         android:layout_width="91dp"
         android:layout_height="26dp"
         android:layout_marginTop="36dp"
-        android:text="IC No"
+        android:text="Email"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvProfEmail" />
-
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:autoSizeMaxTextSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintStart_toEndOf="@+id/tvProfName"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/tvUserEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:autoSizeMaxTextSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/tvProfEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/tvUserIc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:autoSizeMaxTextSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/tvProfIc"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserEmail"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tvProfIC" />
 
     <Button
         android:id="@+id/userProfLogOutBtn"
@@ -111,5 +66,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.868" />
+
+    <Button
+        android:id="@+id/userProfHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfLogOutBtn" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="216dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="88dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toEndOf="@+id/tvProfName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserProfile" />
+
+    <TextView
+        android:id="@+id/tvUserIc"
+        android:layout_width="217dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toEndOf="@+id/tvProfIC"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="218dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toEndOf="@+id/tvProfEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserIc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
